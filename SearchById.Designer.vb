@@ -23,20 +23,18 @@ Partial Class SearchById
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         GroupBox1 = New GroupBox()
-        Label1 = New Label()
-        Label2 = New Label()
-        txtId = New TextBox()
-        txtName = New Label()
+        lblSearchResult = New Label()
         btnSearchById = New Button()
+        txtIdSearchById = New TextBox()
+        Label1 = New Label()
         GroupBox1.SuspendLayout()
         SuspendLayout()
         ' 
         ' GroupBox1
         ' 
+        GroupBox1.Controls.Add(lblSearchResult)
         GroupBox1.Controls.Add(btnSearchById)
-        GroupBox1.Controls.Add(txtName)
-        GroupBox1.Controls.Add(txtId)
-        GroupBox1.Controls.Add(Label2)
+        GroupBox1.Controls.Add(txtIdSearchById)
         GroupBox1.Controls.Add(Label1)
         GroupBox1.Location = New Point(12, 26)
         GroupBox1.Name = "GroupBox1"
@@ -45,48 +43,39 @@ Partial Class SearchById
         GroupBox1.TabStop = False
         GroupBox1.Text = "Buscar alumno por cédula"
         ' 
-        ' Label1
+        ' lblSearchResult
         ' 
-        Label1.AutoSize = True
-        Label1.Location = New Point(41, 49)
-        Label1.Name = "Label1"
-        Label1.Size = New Size(44, 15)
-        Label1.TabIndex = 0
-        Label1.Text = "Cédula"
-        ' 
-        ' Label2
-        ' 
-        Label2.AutoSize = True
-        Label2.Location = New Point(41, 99)
-        Label2.Name = "Label2"
-        Label2.Size = New Size(51, 15)
-        Label2.TabIndex = 1
-        Label2.Text = "Nombre"
-        ' 
-        ' txtId
-        ' 
-        txtId.Location = New Point(110, 46)
-        txtId.Name = "txtId"
-        txtId.Size = New Size(120, 23)
-        txtId.TabIndex = 2
-        ' 
-        ' txtName
-        ' 
-        txtName.AutoSize = True
-        txtName.Location = New Point(110, 99)
-        txtName.Name = "txtName"
-        txtName.Size = New Size(12, 15)
-        txtName.TabIndex = 3
-        txtName.Text = "-"
+        lblSearchResult.AutoSize = True
+        lblSearchResult.Location = New Point(121, 97)
+        lblSearchResult.Name = "lblSearchResult"
+        lblSearchResult.Size = New Size(12, 15)
+        lblSearchResult.TabIndex = 6
+        lblSearchResult.Text = "-"
         ' 
         ' btnSearchById
         ' 
-        btnSearchById.Location = New Point(135, 147)
+        btnSearchById.Location = New Point(130, 157)
         btnSearchById.Name = "btnSearchById"
         btnSearchById.Size = New Size(75, 23)
         btnSearchById.TabIndex = 4
         btnSearchById.Text = "Buscar"
         btnSearchById.UseVisualStyleBackColor = True
+        ' 
+        ' txtIdSearchById
+        ' 
+        txtIdSearchById.Location = New Point(121, 49)
+        txtIdSearchById.Name = "txtIdSearchById"
+        txtIdSearchById.Size = New Size(120, 23)
+        txtIdSearchById.TabIndex = 2
+        ' 
+        ' Label1
+        ' 
+        Label1.AutoSize = True
+        Label1.Location = New Point(52, 52)
+        Label1.Name = "Label1"
+        Label1.Size = New Size(44, 15)
+        Label1.TabIndex = 0
+        Label1.Text = "Cédula"
         ' 
         ' SearchById
         ' 
@@ -102,9 +91,8 @@ Partial Class SearchById
     End Sub
 
     Friend WithEvents GroupBox1 As GroupBox
-    Friend WithEvents txtName As Label
-    Friend WithEvents txtId As TextBox
-    Friend WithEvents Label2 As Label
+    Friend WithEvents txtIdSearchById As TextBox
     Friend WithEvents Label1 As Label
     Friend WithEvents btnSearchById As Button
+    Friend WithEvents lblSearchResult As Label
 End Class

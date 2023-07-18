@@ -23,21 +23,21 @@ Partial Class EditStudent
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         GroupBox1 = New GroupBox()
-        Button1 = New Button()
-        Label1 = New Label()
+        txtNameEdit = New TextBox()
+        txtIdEdit = New TextBox()
         Label2 = New Label()
-        TextBox1 = New TextBox()
-        TextBox2 = New TextBox()
+        Label1 = New Label()
+        btnEdit = New Button()
         GroupBox1.SuspendLayout()
         SuspendLayout()
         ' 
         ' GroupBox1
         ' 
-        GroupBox1.Controls.Add(TextBox2)
-        GroupBox1.Controls.Add(TextBox1)
+        GroupBox1.Controls.Add(txtNameEdit)
+        GroupBox1.Controls.Add(txtIdEdit)
         GroupBox1.Controls.Add(Label2)
         GroupBox1.Controls.Add(Label1)
-        GroupBox1.Controls.Add(Button1)
+        GroupBox1.Controls.Add(btnEdit)
         GroupBox1.Location = New Point(25, 29)
         GroupBox1.Name = "GroupBox1"
         GroupBox1.Size = New Size(310, 154)
@@ -45,23 +45,19 @@ Partial Class EditStudent
         GroupBox1.TabStop = False
         GroupBox1.Text = "Editar estudiante"
         ' 
-        ' Button1
+        ' txtNameEdit
         ' 
-        Button1.Location = New Point(110, 125)
-        Button1.Name = "Button1"
-        Button1.Size = New Size(75, 23)
-        Button1.TabIndex = 0
-        Button1.Text = "Editar"
-        Button1.UseVisualStyleBackColor = True
+        txtNameEdit.Location = New Point(95, 86)
+        txtNameEdit.Name = "txtNameEdit"
+        txtNameEdit.Size = New Size(100, 23)
+        txtNameEdit.TabIndex = 4
         ' 
-        ' Label1
+        ' txtIdEdit
         ' 
-        Label1.AutoSize = True
-        Label1.Location = New Point(26, 89)
-        Label1.Name = "Label1"
-        Label1.Size = New Size(51, 15)
-        Label1.TabIndex = 1
-        Label1.Text = "Nombre"
+        txtIdEdit.Location = New Point(95, 38)
+        txtIdEdit.Name = "txtIdEdit"
+        txtIdEdit.Size = New Size(100, 23)
+        txtIdEdit.TabIndex = 3
         ' 
         ' Label2
         ' 
@@ -72,19 +68,23 @@ Partial Class EditStudent
         Label2.TabIndex = 2
         Label2.Text = "Cédula"
         ' 
-        ' TextBox1
+        ' Label1
         ' 
-        TextBox1.Location = New Point(95, 38)
-        TextBox1.Name = "TextBox1"
-        TextBox1.Size = New Size(100, 23)
-        TextBox1.TabIndex = 3
+        Label1.AutoSize = True
+        Label1.Location = New Point(26, 89)
+        Label1.Name = "Label1"
+        Label1.Size = New Size(51, 15)
+        Label1.TabIndex = 1
+        Label1.Text = "Nombre"
         ' 
-        ' TextBox2
+        ' btnEdit
         ' 
-        TextBox2.Location = New Point(95, 86)
-        TextBox2.Name = "TextBox2"
-        TextBox2.Size = New Size(100, 23)
-        TextBox2.TabIndex = 4
+        btnEdit.Location = New Point(110, 125)
+        btnEdit.Name = "btnEdit"
+        btnEdit.Size = New Size(75, 23)
+        btnEdit.TabIndex = 0
+        btnEdit.Text = "Editar"
+        btnEdit.UseVisualStyleBackColor = True
         ' 
         ' EditStudent
         ' 
@@ -100,9 +100,9 @@ Partial Class EditStudent
     End Sub
 
     Friend WithEvents GroupBox1 As GroupBox
-    Friend WithEvents TextBox2 As TextBox
-    Friend WithEvents TextBox1 As TextBox
+    Friend WithEvents txtNameEdit As TextBox
+    Friend WithEvents txtIdEdit As TextBox
     Friend WithEvents Label2 As Label
     Friend WithEvents Label1 As Label
-    Friend WithEvents Button1 As Button
+    Friend WithEvents btnEdit As Button
 End Class

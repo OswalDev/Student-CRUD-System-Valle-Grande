@@ -8,7 +8,6 @@ Public Class RegisterStudent
     Private Sub btnRegister_Click(sender As Object, e As EventArgs) Handles btnRegister.Click
         Try
             ' Interactuando con la base de datos SQL
-            'Dim connectionString As String = "Data Source=DESKTOP-96AL4P3\MSSQLSERVEROJSG;Initial Catalog=SRE-ValleGrande;Integrated Security=True"
             Dim sql As String = "INSERT INTO students_table (name, personal_id) VALUES (@name, @personal_id)"
 
             Using connection As New SqlConnection(connectionString)
@@ -20,19 +19,19 @@ Public Class RegisterStudent
                     Dim rowsAffected As Integer = command.ExecuteNonQuery()
 
                     If rowsAffected > 0 Then
-                        ' The INSERT operation was successful, data was added to the database.
-                        MessageBox.Show("Data was added to the database successfully.")
+                        ' Si la operación de INSERT fue exitosa,se agrega la data a la base da datos.
+                        MessageBox.Show("Alumno añadido exitosamente.")
                     Else
-                        ' The INSERT operation failed, data was not added to the database.
-                        MessageBox.Show("Failed to add data to the database.")
+                        ' Si la operación de INSERT falla, la data no se agrega a la base de datos.
+                        MessageBox.Show("Error al añadir usuario.")
                     End If
                 End Using
             End Using
 
-            ' If there is no exception, the code execution continues here.
+            ' Si no hay excepciones el codigo continua normalmente.
 
         Catch ex As Exception
-            ' Handle the custom exception ADP_ConnectionRequired_Fill here.
+            ' Maneja excepciones customizadas
             MessageBox.Show("Custom Exception: " & ex.Message)
         End Try
     End Sub

@@ -23,27 +23,39 @@ Partial Class RemoveStudent
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         GroupBox1 = New GroupBox()
+        txtIdRemoveStudent = New TextBox()
+        btnDeleteStudent = New Button()
         Label1 = New Label()
-        Label2 = New Label()
-        Button1 = New Button()
-        TextBox1 = New TextBox()
-        studentNameLabel = New Label()
         GroupBox1.SuspendLayout()
         SuspendLayout()
         ' 
         ' GroupBox1
         ' 
-        GroupBox1.Controls.Add(studentNameLabel)
-        GroupBox1.Controls.Add(TextBox1)
-        GroupBox1.Controls.Add(Button1)
-        GroupBox1.Controls.Add(Label2)
+        GroupBox1.Controls.Add(txtIdRemoveStudent)
+        GroupBox1.Controls.Add(btnDeleteStudent)
         GroupBox1.Controls.Add(Label1)
         GroupBox1.Location = New Point(30, 23)
         GroupBox1.Name = "GroupBox1"
-        GroupBox1.Size = New Size(295, 153)
+        GroupBox1.Size = New Size(295, 145)
         GroupBox1.TabIndex = 0
         GroupBox1.TabStop = False
         GroupBox1.Text = "Eliminar estudiante"
+        ' 
+        ' txtIdRemoveStudent
+        ' 
+        txtIdRemoveStudent.Location = New Point(88, 47)
+        txtIdRemoveStudent.Name = "txtIdRemoveStudent"
+        txtIdRemoveStudent.Size = New Size(116, 23)
+        txtIdRemoveStudent.TabIndex = 3
+        ' 
+        ' btnDeleteStudent
+        ' 
+        btnDeleteStudent.Location = New Point(100, 103)
+        btnDeleteStudent.Name = "btnDeleteStudent"
+        btnDeleteStudent.Size = New Size(75, 23)
+        btnDeleteStudent.TabIndex = 2
+        btnDeleteStudent.Text = "Eliminar"
+        btnDeleteStudent.UseVisualStyleBackColor = True
         ' 
         ' Label1
         ' 
@@ -54,44 +66,11 @@ Partial Class RemoveStudent
         Label1.TabIndex = 0
         Label1.Text = "Cédula: "
         ' 
-        ' Label2
-        ' 
-        Label2.AutoSize = True
-        Label2.Location = New Point(26, 89)
-        Label2.Name = "Label2"
-        Label2.Size = New Size(57, 15)
-        Label2.TabIndex = 1
-        Label2.Text = "Nombre: "
-        ' 
-        ' Button1
-        ' 
-        Button1.Location = New Point(100, 124)
-        Button1.Name = "Button1"
-        Button1.Size = New Size(75, 23)
-        Button1.TabIndex = 2
-        Button1.Text = "Buscar"
-        Button1.UseVisualStyleBackColor = True
-        ' 
-        ' TextBox1
-        ' 
-        TextBox1.Location = New Point(88, 47)
-        TextBox1.Name = "TextBox1"
-        TextBox1.Size = New Size(116, 23)
-        TextBox1.TabIndex = 3
-        ' 
-        ' studentNameLabel
-        ' 
-        studentNameLabel.AutoSize = True
-        studentNameLabel.Location = New Point(89, 89)
-        studentNameLabel.Name = "studentNameLabel"
-        studentNameLabel.Size = New Size(0, 15)
-        studentNameLabel.TabIndex = 4
-        ' 
         ' RemoveStudent
         ' 
         AutoScaleDimensions = New SizeF(7F, 15F)
         AutoScaleMode = AutoScaleMode.Font
-        ClientSize = New Size(358, 202)
+        ClientSize = New Size(358, 189)
         Controls.Add(GroupBox1)
         Name = "RemoveStudent"
         Text = "Eliminar estudiante"
@@ -101,9 +80,8 @@ Partial Class RemoveStudent
     End Sub
 
     Friend WithEvents GroupBox1 As GroupBox
-    Friend WithEvents studentNameLabel As Label
-    Friend WithEvents TextBox1 As TextBox
+    Friend WithEvents txtIdRemoveStudent As TextBox
     Friend WithEvents Button1 As Button
-    Friend WithEvents Label2 As Label
     Friend WithEvents Label1 As Label
+    Friend WithEvents btnDeleteStudent As Button
 End Class

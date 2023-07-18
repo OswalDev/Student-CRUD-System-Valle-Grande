@@ -23,15 +23,15 @@ Partial Class getTotalStudents
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         GroupBox1 = New GroupBox()
-        Label1 = New Label()
+        lblTotalResult = New Label()
         txtNumOfStudents = New Label()
-        Label2 = New Label()
+        Label1 = New Label()
         GroupBox1.SuspendLayout()
         SuspendLayout()
         ' 
         ' GroupBox1
         ' 
-        GroupBox1.Controls.Add(Label2)
+        GroupBox1.Controls.Add(lblTotalResult)
         GroupBox1.Controls.Add(txtNumOfStudents)
         GroupBox1.Controls.Add(Label1)
         GroupBox1.Location = New Point(24, 26)
@@ -41,14 +41,14 @@ Partial Class getTotalStudents
         GroupBox1.TabStop = False
         GroupBox1.Text = "Numero de estudiantes"
         ' 
-        ' Label1
+        ' lblTotalResult
         ' 
-        Label1.AutoSize = True
-        Label1.Location = New Point(21, 70)
-        Label1.Name = "Label1"
-        Label1.Size = New Size(130, 15)
-        Label1.TabIndex = 0
-        Label1.Text = "N° total de estudiantes:"
+        lblTotalResult.AutoSize = True
+        lblTotalResult.Location = New Point(176, 70)
+        lblTotalResult.Name = "lblTotalResult"
+        lblTotalResult.Size = New Size(12, 15)
+        lblTotalResult.TabIndex = 2
+        lblTotalResult.Text = "-"
         ' 
         ' txtNumOfStudents
         ' 
@@ -58,14 +58,14 @@ Partial Class getTotalStudents
         txtNumOfStudents.Size = New Size(0, 15)
         txtNumOfStudents.TabIndex = 1
         ' 
-        ' Label2
+        ' Label1
         ' 
-        Label2.AutoSize = True
-        Label2.Location = New Point(176, 70)
-        Label2.Name = "Label2"
-        Label2.Size = New Size(41, 15)
-        Label2.TabIndex = 2
-        Label2.Text = "Label2"
+        Label1.AutoSize = True
+        Label1.Location = New Point(21, 70)
+        Label1.Name = "Label1"
+        Label1.Size = New Size(130, 15)
+        Label1.TabIndex = 0
+        Label1.Text = "N° total de estudiantes:"
         ' 
         ' getTotalStudents
         ' 
@@ -84,4 +84,5 @@ Partial Class getTotalStudents
     Friend WithEvents txtNumOfStudents As Label
     Friend WithEvents Label1 As Label
     Friend WithEvents Label2 As Label
+    Friend WithEvents lblTotalResult As Label
 End Class
