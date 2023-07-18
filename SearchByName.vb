@@ -20,24 +20,23 @@ Public Class SearchByName
 
                     dataAdapter.Fill(dataTable)
 
-                    ' Check if dataTable has rows (i.e., a match for the name)
+                    ' Ealua si dataTable tiene filas (un valor que haga match para nombre)
                     If dataTable.Rows.Count > 0 Then
-                        ' Data found, retrieve the values and display them in the Label control
+                        ' Data encontrada, se retornan los valores y se muestran en el txtLabel
                         Dim row As DataRow = dataTable.Rows(0)
-                        'Dim name As String = row("name").ToString()
+                        ' Almancena el valor de la cédula en la variable personal_id
                         Dim personal_id As String = row("personal_id").ToString()
 
-                        ' Assuming you have a Label control named lblSearchResult on your form
+                        ' Se imprime el valor obtenido en el label lblSearchResult
                         lblSearchResult.Text = "cedula: " & personal_id & vbCrLf
                     Else
-                        ' Data not found for the given name
+                        ' Si la data no fue encontrada para el nombre dado
                         MessageBox.Show("No se encontró nadie registrado con el nombre: " & txtIdSearchByName.Text)
                     End If
                 End Using
             End Using
         Catch ex As Exception
-            ' Handle any exceptions that may occur during the database interaction
-            MessageBox.Show("Error al buscar en la base de datos: " & ex.Message)
+            ' Maneja cualquier excepción que ocurra al interactuar con la base de datos
         End Try
 
     End Sub

@@ -18,10 +18,10 @@ Public Class RemoveStudent
                     Dim rowsAffected As Integer = command.ExecuteNonQuery()
 
                     If rowsAffected > 0 Then
-                        ' The DELETE operation was successful, the element was deleted from the database.
+                        ' La operación DELETE fue exitosa, el alumno fue eliminado de la base de datos.
                         MessageBox.Show("Alumno eliminado exitosamente")
                     Else
-                        ' The DELETE operation failed, the element with the given ID was not found.
+                        ' La operación DELETE fue fallida, el alumno con la cédula dada no fue econtrado.
                         MessageBox.Show("Alumno con Cédula " & txtIdRemoveStudent.ToString() & " no fue encontrado.")
                     End If
                 End Using
