@@ -1,6 +1,9 @@
 # Student-CRUD-System-Valle-Grande
 Student CRUD System for Valle Grande's Institute
 
+# Archivo de la base de datos
+Dentro de la carpeta del projecto se encuentra un archivo .BACPAC llamado "serverBackup" que contiene la base de datos SQL
+
 # Nombre de la base de datos
 SRE-ValleGrande
 
