@@ -1,6 +1,9 @@
 # Student-CRUD-System-Valle-Grande
 Student CRUD System for Valle Grande's Institute
 
+# Nombre de la base de datos
+SRE-ValleGrande
+
 # Modificar SQL string de conección
 Para modificar el String de la Base de datos ubicar el archivo llamado GlobalVariables.vb que maneja la variable de conección y modificarla con su cadena de conección
 
