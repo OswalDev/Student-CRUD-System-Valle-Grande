@@ -3,6 +3,7 @@
 Public Class getTotalStudents
     Private Sub getTotalStudents_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Try
+            ' Interactuando con la base de datos SQL
             Dim sql As String = "SELECT COUNT(*) AS TotalStudents FROM students_table"
             Dim totalStudents As Integer = 0
 
